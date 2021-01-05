@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    #field {
+      width: 200px;
+      border: 10px groove black;
+      background-color: #00FF00;
+      position: relative;
+    }
+
+    #ball {
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div id="field">
+    <img src="https://en.js.cx/clipart/ball.svg" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+  </div>
+
+<script>
+let ballFoot = document.querySelector('#ball');
+
+ballCenterX = ballFoot.offsetWidth/2;
+ballCenterY = ballFoot.offsetHeight/2;
+
+
+
+let field = document.querySelector('#field');
+
+let centerX = field.clientWidth/2;
+let centerY = field.clientHeight/2;
+
+ballFoot.style.left = centerX - ballCenterX + 'px';
+ballFoot.style.top = centerY - ballCenterY + 'px';
+
+console.log(ballCenterX, ballCenterY);
+console.log(centerX, centerY);
+</script>
+</body>
+
+</html>

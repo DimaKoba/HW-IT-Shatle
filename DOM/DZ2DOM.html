@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let ol = document.createElement('ol');
+let arr = ["Viktor", "Tatiana", "Eduard", "Michael", "Denis", "Peter", "Ann", "Dmitry",
+"Sergey", "Ivan", "Alan"];
+document.body.append(ol);
+arr.forEach((item, index)=> {
+    let li = document.createElement('li');
+    li.innerHTML = item;
+    if(index % 2 === 0) {
+        li.classList.add('even');
+        li.style.backgroundColor = 'green'
+    } else {
+        li.classList.add('odd');
+        li.style.backgroundColor = 'yellow'
+    }
+    ol.append(li);
+});
+
+
+
+const hasSimilarLetter = (name) => {
+const arr = name.toLowerCase().split('');
+let isSimilar = false;
+arr.forEach(item => {
+const mas = name.toLowerCase().split(item);
+if(mas.length > 2) {
+    isSimilar = true;
+    
+   }
+})
+return isSimilar;
+
+}
+
+
+
+
+    </script>
+</body>
+</html>
