@@ -23,12 +23,28 @@
 // <li>78</li> // 3 + 8 + 20 + 46 + 1
 // </ul>
 
+let ul = document.createElement('ul');
+document.body.append(ul);
+let arr = [];
 while (true) {
-let addNumber = +prompt('Введите число',);
- 
-if (addNumber !=== null) break;
+    let askNumber = +prompt('Введите число',);
+    if (!askNumber) break;
+    arr.push(askNumber);
+}
+let sum = 0;
+for(let num of arr) {
+    sum += num;
+    
+    let li = document.createElement('li');
+document.querySelector('ul').append(li);
+li.innerHTML = sum;
 
 }
+
+
+
+
+
 
 
 

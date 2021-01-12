@@ -29,16 +29,17 @@ function showMessage(text, backColor, stepTop, stepLeft) {
     let zeroDiv = document.querySelector('div');
     if (countDiv > 3) {
         zeroDiv.remove();
-        console.log(top);
     }
 
     let coord = div.getBoundingClientRect();
+    
+   
     for (let i = 0; i < countDiv; ++i) {
-        if (coord == document.querySelectorAll('div')[i].getBoundingClientRect()) {
-            document.querySelectorAll('div')[i].offsetTop += 25;
-           
-        }
+        if (coord === document.querySelectorAll('div')[i].getBoundingClientRect()) {
+            document.querySelectorAll('div')[i].style.left + '25px';
 
+        }
+        
     }
 }
 
